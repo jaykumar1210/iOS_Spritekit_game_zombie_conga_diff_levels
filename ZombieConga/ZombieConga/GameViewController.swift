@@ -1,0 +1,72 @@
+/**
+ * Copyright (c) 2016 Razeware LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+import UIKit
+import SpriteKit
+
+ import AVFoundation
+
+class GameViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let scene =
+      MainMenuScene(size:CGSize(width: 2048, height: 1536))
+    let skView = self.view as! SKView
+    skView.showsFPS = true
+    skView.showsNodeCount = true
+    skView.ignoresSiblingOrder = true
+    scene.scaleMode = .aspectFill
+    skView.presentScene(scene)
+  }
+   
+//    
+//    var backgroundMusicPlayer = AVAudioPlayer()
+//    
+//    func playBackgroundMusic(filename: String) {
+//        let resourceUrl = Bundle.main.url(forResource:
+//            filename, withExtension: nil)
+//        guard let url = resourceUrl else {
+//            print("Could not find file: \(filename)")
+//            return
+//        }
+//        
+//        do {
+//            try backgroundMusicPlayer =
+//                AVAudioPlayer(contentsOf: url)
+//            backgroundMusicPlayer.numberOfLoops = -1
+//            backgroundMusicPlayer.prepareToPlay()
+//            backgroundMusicPlayer.play()
+//            backgroundMusicPlayer.stop()
+//        } catch {
+//            print("Could not create audio player!")
+//            return
+//        }
+//    }
+
+   
+    
+   
+    
+    override var prefersStatusBarHidden: Bool {
+    return true
+  }
+}
